@@ -1,68 +1,149 @@
 {
-  "public_folder": "public",
-  "default_css": "/main.css",
-  "pages": {
-    "page1": {
-      "title": "demo page - search engines",
-      "subtitle": "this is a demo page for tinytree. Links contain different search engines",
-      "seo_keywords": ["add", "any", "additional", "seo", "keywords", "you would like"],
-      "css": "/custom.css",
-      "links": {
-        "google": {
-          "title": "Google",
-          "subtitle": "Links to Google search engine",
-          "url": "https://google.com"
+    "public_folder": "public",
+    "default_css": "/main.css",
+    "pages": {
+        "page1": {
+            "title": "demo page - search engines",
+            "subtitle": "this is a demo page for tinytree. Links contain different search engines",
+            "seo_keywords": [
+                "add",
+                "any",
+                "additional",
+                "seo",
+                "keywords",
+                "you would like"
+            ],
+            "css": "/custom.css",
+            "links": {
+                "google": {
+                    "title": "Google",
+                    "subtitle": "Links to Google search engine",
+                    "url": "https://google.com"
+                },
+                "bing": {
+                    "title": "Bing",
+                    "subtitle": "Links to Bing search engine",
+                    "url": "https://bing.com"
+                },
+                "duckduckgo": {
+                    "title": "DuckDuckGo",
+                    "subtitle": "Links to DuckDuckGo search engine",
+                    "url": "https://duckduckgo.com"
+                },
+                "yahoo": {
+                    "title": "Yahoo",
+                    "subtitle": "Links to Yahoo search engine",
+                    "url": "https://yahoo.com"
+                }
+            }
         },
-        "bing": {
-          "title": "Bing",
-          "subtitle": "Links to Bing search engine",
-          "url": "https://bing.com"
+        "page2": {
+            "title": "demo page - social media",
+            "subtitle": "this is a demo page for social media links",
+            "seo_keywords": [
+                "social",
+                "media",
+                "links",
+                "connect"
+            ],
+            "links": {
+                "facebook": {
+                    "title": "Facebook",
+                    "subtitle": "Links to Facebook",
+                    "url": "https://facebook.com"
+                },
+                "twitter": {
+                    "title": "Twitter",
+                    "subtitle": "Links to Twitter",
+                    "url": "https://twitter.com"
+                }
+            }
         },
-        "duckduckgo": {
-          "title": "DuckDuckGo",
-          "subtitle": "Links to DuckDuckGo search engine",
-          "url": "https://duckduckgo.com"
-        },
-        "yahoo": {
-          "title": "Yahoo",
-          "subtitle": "Links to Yahoo search engine",
-          "url": "https://yahoo.com"
+        "page3": {
+            "title": "demo page - news",
+            "subtitle": "this is a demo page for news websites",
+            "seo_keywords": [
+                "news",
+                "latest",
+                "articles"
+            ],
+            "links": {
+                "cnn": {
+                    "title": "CNN",
+                    "subtitle": "Links to CNN news",
+                    "url": "https://cnn.com"
+                },
+                "bbc": {
+                    "title": "BBC",
+                    "subtitle": "Links to BBC news",
+                    "url": "https://bbc.com"
+                },
+                "nytimes": {
+                    "title": "The New York Times",
+                    "subtitle": "Links to NY Times",
+                    "url": "https://nytimes.com"
+                },
+                "reuters": {
+                    "title": "Reuters",
+                    "subtitle": "Links to Reuters news",
+                    "url": "https://reuters.com"
+                },
+                "aljazeera": {
+                    "title": "Al Jazeera",
+                    "subtitle": "Links to Al Jazeera news",
+                    "url": "https://aljazeera.com"
+                },
+                "foxnews": {
+                    "title": "Fox News",
+                    "subtitle": "Links to Fox News",
+                    "url": "https://foxnews.com"
+                },
+                "huffpost": {
+                    "title": "HuffPost",
+                    "subtitle": "Links to HuffPost news",
+                    "url": "https://huffpost.com"
+                },
+                "buzzfeed": {
+                    "title": "BuzzFeed News",
+                    "subtitle": "Links to BuzzFeed news",
+                    "url": "https://buzzfeed.com/news"
+                },
+                "theguardian": {
+                    "title": "The Guardian",
+                    "subtitle": "Links to The Guardian",
+                    "url": "https://theguardian.com"
+                },
+                "msnbc": {
+                    "title": "MSNBC",
+                    "subtitle": "Links to MSNBC news",
+                    "url": "https://msnbc.com"
+                },
+                "forbes": {
+                    "title": "Forbes",
+                    "subtitle": "Links to Forbes news",
+                    "url": "https://forbes.com"
+                },
+                "nationalgeographic": {
+                    "title": "National Geographic",
+                    "subtitle": "Links to National Geographic",
+                    "url": "https://nationalgeographic.com"
+                },
+                "time": {
+                    "title": "Time",
+                    "subtitle": "Links to Time magazine",
+                    "url": "https://time.com"
+                },
+                "wsj": {
+                    "title": "The Wall Street Journal",
+                    "subtitle": "Links to WSJ",
+                    "url": "https://wsj.com"
+                },
+                "marketwatch": {
+                    "title": "MarketWatch",
+                    "subtitle": "Links to MarketWatch news",
+                    "url": "https://marketwatch.com"
+                }
+            }
         }
-      }
-    },
-    "page2": {
-      "title": "demo page - social media",
-      "subtitle": "this is a demo page for social media links",
-      "seo_keywords": ["social", "media", "links", "connect"],
-      "links": {
-        "facebook": {
-          "title": "Facebook",
-          "subtitle": "Links to Facebook",
-          "url": "https://facebook.com"
-        },
-        "twitter": {
-          "title": "Twitter",
-          "subtitle": "Links to Twitter",
-          "url": "https://twitter.com"
-        }
-      }
-    },
-    "page3": {
-      "title": "demo page - news",
-      "subtitle": "this is a demo page for news websites",
-      "seo_keywords": ["news", "latest", "articles"],
-      "links": {
-        "cnn": {
-          "title": "CNN",
-          "subtitle": "Links to CNN news",
-          "url": "https://cnn.com"
-        },
-        "bbc": {
-          "title": "BBC",
-          "subtitle": "Links to BBC news",
-          "url": "https://bbc.com"
-        }
-      }
     }
-  }
 }

@@ -1,7 +1,9 @@
 # TinyTree
 Tinytree is the smallest, most performant linktree alternative.
 
-It uses a config file to generate static HTML files for every page of links.
+It uses a config file to generate static HTML for every page.
+
+[View live demo](https://links.kasibhatla.dev/demo_dark/)
 
 ![Demo Image](images/tinytree-demo-ss.png)
 

@@ -52,7 +52,7 @@ a {
 }
 
 .tt-link:hover {
-    transform: scale(0.995);
+    /*transform: scale(0.995);*/
     background-color: #3a3a3c; /* Darker hover state */
     border: #444 1px solid; /* Subtle border on hover */
 }

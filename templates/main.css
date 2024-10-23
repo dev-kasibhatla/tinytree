@@ -52,7 +52,7 @@ a {
 }
 
 .tt-link:hover {
-    transform: scale(0.995);
+    /*transform: scale(0.995);*/
     background-color: #f9f9f9;
     border: #333 1px solid;
 }

@@ -1,6 +1,6 @@
 {
     "public_folder": "public",
-    "default_css": "/main.css",
+    "default_css": "templates/main.css",
     "pages": {
         "page1": {
             "title": "demo page - search engines",
@@ -13,7 +13,7 @@
                 "keywords",
                 "you would like"
             ],
-            "css": "/custom.css",
+            "css": "templates/custom-example.css",
             "links": {
                 "google": {
                     "title": "Google",

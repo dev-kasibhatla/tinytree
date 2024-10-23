@@ -1,6 +1,7 @@
 import json
 import sys
 import os
+import shutil
 
 def extract_args():
     return {}
@@ -74,29 +75,51 @@ def create_dir_if_not_exists(dir_path):
         os.makedirs(dir_path)
 
 def generate_dir_structure(config):
+    print("Generating directory structure")
+
+    # delete public folder if it exists
+    if os.path.exists(config['public_folder']):
+        # delete recursively
+        shutil.rmtree(config['public_folder'])
+
     create_dir_if_not_exists(config['public_folder'])
+
+    # copy main css file
+    default_css_name = os.path.basename(config['default_css'])
+    dst_css_file = os.path.join(config['public_folder'], default_css_name)
+    shutil.copy(config['default_css'], dst_css_file)
+
     for page, page_data in config['pages'].items():
         page_dir = os.path.join(config['public_folder'], page)
         create_dir_if_not_exists(page_dir)
 
+        # copy css file if specified
+        if 'css' in page_data:
+            source_css_file = page_data['css']
+            source_css_file_name = os.path.basename(source_css_file)
+            dst_css_file = os.path.join(config['public_folder'], source_css_file_name)
+            if not os.path.exists(dst_css_file):
+                shutil.copy(source_css_file, dst_css_file)
+
     print("Directory structure generated.")
 
 def get_boilerplate_content():
-    with open('boiler-main.html', 'r') as boiler_main:
+    with open('templates/boiler-main.html', 'r') as boiler_main:
         boiler_main_content = boiler_main.read()
 
-    with open('boiler-link.html', 'r') as boiler_link:
+    with open('templates/boiler-link.html', 'r') as boiler_link:
         boiler_link_content = boiler_link.read()
 
     return boiler_main_content, boiler_link_content
 
 def get_scripts_content():
-    with open('scripts.js', 'r') as scripts_file:
+    with open('templates/scripts.js', 'r') as scripts_file:
         scripts_content = scripts_file.read()
 
     return scripts_content
 
 def generate_files(config):
+    print("Generating files")
     boiler_main, boiler_link = get_boilerplate_content()
     scripts_content = get_scripts_content()
 
@@ -108,10 +131,12 @@ def generate_files(config):
         main_content = boiler_main.replace('--title', page_data['title'])
         main_content = main_content.replace('--subtitle', page_data['subtitle'])
         main_content = main_content.replace('--seo_keywords', ', '.join(page_data['seo_keywords']))
-        css_location = config['default_css']
+        css_location = os.path.basename(config['default_css'])
+
+        #  check for custom css
         if 'css' in page_data:
-            css_location = page_data['css']
-        main_content = main_content.replace('--css-location', css_location)
+            css_location = os.path.basename(page_data['css'])
+        main_content = main_content.replace('--css-location', f'/{css_location}')
 
         links_content = ''
         for link, link_data in page_data['links'].items():
